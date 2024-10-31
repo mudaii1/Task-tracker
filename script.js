@@ -2,16 +2,16 @@ const inputBox = document.getElementById("input-task");
 const sendBtn = document.querySelector(".send-btn");
 const removeTaskBtn = document.querySelector(".remove-btn");
 const tasksContainer = document.querySelector(".tasks");
-let tasks = [];
 
 const uploadStorage = function () {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
 const loadTasks = function () {
-  if (localStorage.key("tasks "))
-    tasks = JSON.parse(localStorage.getItem("tasks"));
+  if (localStorage.key("tasks"))
+    return JSON.parse(localStorage.getItem("tasks"));
 };
+const tasks = loadTasks() ? loadTasks() : [];
 
 const removeTask = function () {
   const taskInfo = this.closest(".task").querySelector(".task-info").innerHTML;
@@ -29,6 +29,7 @@ const addListenersToAll = function () {
 
 const displayTasks = function (tasks) {
   tasksContainer.innerHTML = "";
+  if (!tasks) return;
   tasks.forEach((task, i) => {
     const html = `
     <div class="task">
@@ -47,31 +48,7 @@ const displayTasks = function (tasks) {
     if (tasks[i].state === "completed") input.checked = true;
     addListenersToAll();
   });
-
-  // const taskContainer = document.createElement("div");
-  // taskContainer.classList.add("task");
-  // const label = document.createElement("label");
-  // label.classList.add("checkbox-container", "test");
-  // const input = document.createElement("input");
-  // input.type = "checkbox";
-  // task.state === "completed"
-  //   ? (input.checked = true)
-  //   : (input.checked = false);
-  // const span = document.createElement("span");
-  // span.classList.add("checkmark");
-  // const p = document.createElement("p");
-  // p.classList.add("task-info");
-  // p.innerHTML = task.info;
-  // label.insertAdjacentElement("beforeend", input);
-  // label.insertAdjacentElement("beforeend", span);
-  // label.insertAdjacentElement("beforeend", p);
-  // const i = document.createElement("i");
-  // i.classList.add("fa-solid", "fa-trash-can", "remove-btn");
-  // taskContainer.insertAdjacentElement("afterbegin", label);
-  // taskContainer.insertAdjacentElement("beforeend", i);
-  // tasksContainer.insertAdjacentElement("beforeend", taskContainer);
 };
-loadTasks();
 displayTasks(tasks);
 
 const addTask = function () {

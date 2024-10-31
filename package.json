@@ -1,11 +1,14 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "main": "script.js",
+  "default": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mudai",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
 }
