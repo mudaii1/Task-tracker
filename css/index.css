@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* reset styles */
+* {
+  color: inherit;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+img {
+  max-width: 100%;
+}
+
+.todo-tracker-app {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo-tracker-app .container {
+  border: 2px solid black;
+  width: 600px;
+  border-radius: 15px;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px;
+}
+.todo-tracker-app .container .details {
+  width: 400px;
+}
+.todo-tracker-app .container .details .app-title {
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-weight: normal;
+}
+.todo-tracker-app .container .details .input {
+  position: relative;
+  margin: 0 0 20px;
+}
+.todo-tracker-app .container .details .input input {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+.todo-tracker-app .container .details .input input::-webkit-input-placeholder {
+  color: rgba(128, 128, 128, 0.457);
+}
+.todo-tracker-app .container .details .input input::-moz-placeholder {
+  color: rgba(128, 128, 128, 0.457);
+}
+.todo-tracker-app .container .details .input input:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.457);
+}
+.todo-tracker-app .container .details .input input::-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.457);
+}
+.todo-tracker-app .container .details .input input::placeholder {
+  color: rgba(128, 128, 128, 0.457);
+}
+.todo-tracker-app .container .details .input .send-btn {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  height: 30px;
+  width: 35px;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.todo-tracker-app .container .details .input .send-btn:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#8e43e7), to(#7d3f98));
+  background: linear-gradient(to right, #8e43e7, #7d3f98);
+}
+.todo-tracker-app .container .details .tasks .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.todo-tracker-app .container .details .tasks .task .checkbox-container {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.todo-tracker-app .container .details .tasks .task .checkbox-container input {
+  display: none;
+}
+.todo-tracker-app .container .details .tasks .task .checkbox-container input:checked ~ .checkmark {
+  background-color: grey;
+}
+.todo-tracker-app .container .details .tasks .task .checkbox-container input:checked ~ p {
+  color: rgba(128, 128, 128, 0.5);
+  text-decoration: line-through;
+}
+.todo-tracker-app .container .details .tasks .task .checkbox-container .checkmark {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 2px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 2px;
+  border: 2px solid black;
+}
+.todo-tracker-app .container .details .tasks .task .remove-btn {
+  cursor: pointer;
+}
+.todo-tracker-app .container .details .tasks .task .remove-btn:hover {
+  color: red;
+}
+/*# sourceMappingURL=index.css.map */
