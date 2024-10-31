@@ -73,7 +73,7 @@ const addTask = function () {
         <i class="fa-solid fa-trash-can remove-btn"></i>
     </div>
   `;
-  tasksContainer.insertAdjacentHTML("afterbegin", html);
+  tasksContainer.insertAdjacentHTML("beforeend", html);
   tasksContainer
     .querySelector(".task")
     .querySelector(".remove-btn")
