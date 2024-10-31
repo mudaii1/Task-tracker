@@ -12,7 +12,7 @@ const loadTasks = function () {
     return JSON.parse(localStorage.getItem("tasks"));
 };
 const tasks = loadTasks() ? loadTasks() : [];
-
+console.log(tasks);
 const removeTask = function () {
   const taskInfo = this.closest(".task").querySelector(".task-info").innerHTML;
   this.closest(".task").remove();
@@ -73,7 +73,7 @@ const addTask = function () {
         <i class="fa-solid fa-trash-can remove-btn"></i>
     </div>
   `;
-  tasksContainer.insertAdjacentHTML("beforeend", html);
+  tasksContainer.insertAdjacentHTML("afterbegin", html);
   tasksContainer
     .querySelector(".task")
     .querySelector(".remove-btn")
