@@ -41,12 +41,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
 }
 .todo-tracker-app .container {
   border: 2px solid black;
   width: 600px;
   border-radius: 15px;
-  padding: 30px 0;
+  padding: 30px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,6 +55,16 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 30px;
+}
+@media (min-width: 0) and (max-width: 479px) {
+  .todo-tracker-app .container {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) and (max-width: 719px) {
+  .todo-tracker-app .container {
+    width: 100%;
+  }
 }
 .todo-tracker-app .container .details {
   width: 400px;
